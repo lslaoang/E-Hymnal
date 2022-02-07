@@ -1,4 +1,4 @@
-package com.example.ehymnal.service.prepare;
+package com.lao.ehymnal.service.prepare;
 
 import org.springframework.stereotype.Service;
 
