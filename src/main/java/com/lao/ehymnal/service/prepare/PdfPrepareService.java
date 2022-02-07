@@ -1,6 +1,8 @@
 package com.lao.ehymnal.service.prepare;
 
-public interface PreparePdfService {
+import com.lao.ehymnal.model.Hymn;
+
+public interface PdfPrepareService {
 
     void splitPdfFilesByPage(String pdfFileAsString, int page);
 
@@ -9,4 +11,6 @@ public interface PreparePdfService {
     void collatePdfFiles();
 
     void updatePdfFile();
+
+    void addPdfFile(Hymn hymn);
 }

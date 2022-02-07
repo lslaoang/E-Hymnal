@@ -1,4 +1,4 @@
-package com.lao.ehymnal.present;
+package com.lao.ehymnal.service.present;
 
 public interface PresentPdfService {
 
