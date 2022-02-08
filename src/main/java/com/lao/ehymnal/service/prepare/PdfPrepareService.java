@@ -10,7 +10,7 @@ public interface PdfPrepareService {
 
     void collatePdfFiles();
 
-    void updatePdfFile();
+    void updatePdfFile(String id);
 
     void addPdfFile(Hymn hymn);
 }
