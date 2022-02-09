@@ -30,7 +30,7 @@ public class PdfPrepareServiceImpl implements PdfPrepareService {
 
     @Override
     public void updatePdfFile(String id) {
-        Hymn hymn = hymnRepository.findById(id).get();
+        Hymn hymn = hymnRepository.findById(id);
         // TODO : Update impl
         hymnRepository.save(hymn);
 
