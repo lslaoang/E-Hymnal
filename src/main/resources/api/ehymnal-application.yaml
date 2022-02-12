@@ -5,6 +5,167 @@ info:
   version: 1.0.0
 servers:
   - url: 'https'
-paths:
 
-  
+tags:
+  - name: Add Hymn
+    description: Add file and metadata of a hymn in the database
+  - name: Update Hymn
+    description: Update file and metadata of a hymn in the database
+  - name: Delete Hymn
+    description: Remove file and metadata of a hymn in the database
+
+
+paths:
+  /add-file:
+    post:
+      tags:
+        - Add Hymn
+      summary: "Adding file and metadata of a hymn"
+      description: ""
+      operationId: addHymn
+      requestBody:
+        description: "Hymn object that needs to be added to the database"
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Hymn"
+      responses:
+        201:
+          description: "Accepted"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        400:
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        403:
+          description: "Forbidden"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        500:
+          description: "Internal Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+
+  /update-file:
+    post:
+      tags:
+        - Update Hymn
+      summary: "Updating file and metadata of a hymn"
+      description: ""
+      operationId: updateHymn
+      requestBody:
+        description: "Hymn object that needs to be updated to the database"
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Hymn"
+      responses:
+        201:
+          description: "Accepted"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        400:
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        403:
+          description: "Forbidden"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        500:
+          description: "Internal Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+
+  /delete/{fileId}:
+    delete:
+      tags:
+        - Delete Hymn
+      summary: "Removing hymn file in the database"
+      description: ""
+      operationId: deleteHymn
+      parameters:
+        - in: path
+          name: fileId
+          schema:
+            type: string
+          required: true
+          description: "File ID of the hymn file to  be deleted."
+          example: "001"
+      responses:
+        201:
+          description: "Accepted"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        400:
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        403:
+          description: "Forbidden"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        500:
+          description: "Internal Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+
+
+components:
+  schemas:
+    Hymn:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "001"
+        hymnNumber:
+          type: integer
+          format: int64
+          example: 100
+        hymnTitle:
+          type: string
+          example: "Sample Hymn Title"
+        hymnFile:
+          type: string
+          format: base64
+          example: someBase64EncodedHymn
+    Response:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 200
+        name:
+          type: string
+          example: "Response Object"
+        description:
+          type: string
+          example: "This is what happened"
