@@ -3,8 +3,6 @@ info:
   title: E-Hymnal
   description: E-Hymnal
   version: 1.0.0
-servers:
-  - url: 'https'
 
 tags:
   - name: Add Hymn

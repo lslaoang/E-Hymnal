@@ -8,8 +8,8 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>E-Hymnal</artifactId>
+    <groupId>com.lao</groupId>
+    <artifactId>ehymnal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>E-Hymnal</name>
     <description>E-Hymnal</description>
@@ -52,6 +52,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-codegen-maven-plugin</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.1.11</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,6 +77,34 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+
+            <!-- https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-maven-plugin -->
+            <plugin>
+                <groupId>io.swagger.codegen.v3</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId>
+                <version>3.0.31</version>
+                <executions>
+                    <execution>
+                        <id>generate-ehymnal-api</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/api/ehymnal-application.yaml</inputSpec>
+                            <output>${project.build.directory}/generated/sources</output>
+                            <language>spring</language>
+                            <generateSupportingFiles>false</generateSupportingFiles>
+                            <apiPackage>com.ehymnal.api</apiPackage>
+                            <modelPackage>com.ehymnal.api.model</modelPackage>
+                            <generateApiTests>false</generateApiTests>
+                            <configOptions>
+                                <interfaceOnly>true</interfaceOnly>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
