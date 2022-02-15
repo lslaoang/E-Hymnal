@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: E-Hymnal
+  title: "E-Hymnal API"
   description: E-Hymnal
   version: 1.0.0
 

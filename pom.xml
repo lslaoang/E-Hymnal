@@ -93,7 +93,7 @@
                         <phase>generate-resources</phase>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/api/ehymnal-application.yaml</inputSpec>
-                            <output>${project.build.directory}/generated/sources</output>
+                            <output>${project.build.directory}/generated-sources</output>
                             <language>spring</language>
                             <generateSupportingFiles>false</generateSupportingFiles>
                             <apiPackage>com.ehymnal.api</apiPackage>
@@ -108,5 +108,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>E-Hymnal</name>
+            <url>https://maven.pkg.github.com/lslaoang/E-hymnal</url>
+        </repository>
+    </distributionManagement>
 
 </project>
