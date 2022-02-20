@@ -11,6 +11,8 @@ tags:
     description: Update file and metadata of a hymn in the database
   - name: Delete Hymn
     description: Remove file and metadata of a hymn in the database
+  -name: Display all Hymns
+    description: Display all the hymns in the repository
 
 
 paths:
@@ -109,6 +111,39 @@ paths:
           required: true
           description: "File ID of the hymn file to  be deleted."
           example: "001"
+      responses:
+        201:
+          description: "Accepted"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        400:
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        403:
+          description: "Forbidden"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+        500:
+          description: "Internal Error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+
+  /hymns:
+    get:
+      tags:
+        - Display all Hymns
+      summary: "Displaying all hymns in the database"
+      description: ""
+      operationId: getAllHymn
       responses:
         201:
           description: "Accepted"
