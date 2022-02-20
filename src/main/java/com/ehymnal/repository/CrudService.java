@@ -1,4 +1,4 @@
-package com.lao.ehymnal.repository;
+package com.ehymnal.repository;
 
 import java.util.Set;
 

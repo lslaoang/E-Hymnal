@@ -1,4 +1,4 @@
-package com.lao.ehymnal;
+package com.ehymnal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,12 +1,12 @@
-package com.lao.ehymnal.service.present;
+package com.ehymnal.service.present;
 
-import com.lao.ehymnal.model.Hymn;
+import com.ehymnal.model.Hymn;
 
 import java.util.List;
 
 public interface PresentPdfService {
 
-    void displayPdfFiles();
+    List<Hymn> displayPdfFiles();
 
     List<Hymn> sortHymnById();
 

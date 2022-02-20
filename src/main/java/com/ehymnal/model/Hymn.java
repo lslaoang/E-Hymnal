@@ -1,4 +1,4 @@
-package com.lao.ehymnal.model;
+package com.ehymnal.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +20,7 @@ public class Hymn {
     private String id;
     private String number;
     private String title;
-    private String printDate;
+    private Date printDate;
     private String language;
     private byte[] pdfFile;
 

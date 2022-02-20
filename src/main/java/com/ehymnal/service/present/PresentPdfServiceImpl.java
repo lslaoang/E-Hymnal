@@ -1,7 +1,7 @@
-package com.lao.ehymnal.service.present;
+package com.ehymnal.service.present;
 
-import com.lao.ehymnal.model.Hymn;
-import com.lao.ehymnal.repository.HymnRepository;
+import com.ehymnal.model.Hymn;
+import com.ehymnal.repository.HymnRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
@@ -18,9 +18,8 @@ public class PresentPdfServiceImpl implements PresentPdfService {
     }
 
     @Override
-    public void displayPdfFiles() {
-
-        hymnRepository.findAll();
+    public List<Hymn> displayPdfFiles() {
+        return (List<Hymn>) hymnRepository.findAll();
     }
 
     @Override

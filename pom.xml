@@ -8,7 +8,7 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.lao</groupId>
+    <groupId>com</groupId>
     <artifactId>ehymnal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>E-Hymnal</name>

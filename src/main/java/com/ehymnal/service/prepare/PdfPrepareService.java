@@ -1,6 +1,6 @@
-package com.lao.ehymnal.service.prepare;
+package com.ehymnal.service.prepare;
 
-import com.lao.ehymnal.model.Hymn;
+import com.ehymnal.model.Hymn;
 
 public interface PdfPrepareService {
 

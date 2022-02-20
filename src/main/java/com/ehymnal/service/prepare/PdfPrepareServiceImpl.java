@@ -1,7 +1,7 @@
-package com.lao.ehymnal.service.prepare;
+package com.ehymnal.service.prepare;
 
-import com.lao.ehymnal.model.Hymn;
-import com.lao.ehymnal.repository.HymnRepository;
+import com.ehymnal.model.Hymn;
+import com.ehymnal.repository.HymnRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

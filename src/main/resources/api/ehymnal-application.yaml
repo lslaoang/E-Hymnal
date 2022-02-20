@@ -11,7 +11,7 @@ tags:
     description: Update file and metadata of a hymn in the database
   - name: Delete Hymn
     description: Remove file and metadata of a hymn in the database
-  -name: Display all Hymns
+  - name: Display all Hymns
     description: Display all the hymns in the repository
 
 
@@ -36,25 +36,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Accepted"
+
         400:
           description: "Bad request"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/BadRequest"
         403:
           description: "Forbidden"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Forbidden"
         500:
           description: "Internal Error"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/InternalError"
 
   /update-file:
     post:
@@ -76,25 +77,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Accepted"
+
         400:
           description: "Bad request"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/BadRequest"
         403:
           description: "Forbidden"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Forbidden"
         500:
           description: "Internal Error"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/InternalError"
 
   /delete/{fileId}:
     delete:
@@ -117,25 +119,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Accepted"
+
         400:
           description: "Bad request"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/BadRequest"
         403:
           description: "Forbidden"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Forbidden"
         500:
           description: "Internal Error"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/InternalError"
 
   /hymns:
     get:
@@ -150,26 +153,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Accepted"
+
         400:
           description: "Bad request"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/BadRequest"
         403:
           description: "Forbidden"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
+                $ref: "#/components/schemas/Forbidden"
         500:
           description: "Internal Error"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Response"
-
+                $ref: "#/components/schemas/InternalError"
 
 components:
   schemas:
@@ -190,15 +193,44 @@ components:
           type: string
           format: base64
           example: someBase64EncodedHymn
-    Response:
+
+
+    Accepted:
       type: object
       properties:
         code:
           type: integer
-          example: 200
-        name:
-          type: string
-          example: "Response Object"
+          default: 200
         description:
           type: string
-          example: "This is what happened"
+          default: "Request Accepted."
+
+    BadRequest:
+      type: object
+      properties:
+        code:
+          type: integer
+          default: 400
+        description:
+          type: string
+          default: "Bad Request."
+
+    Forbidden:
+      type: object
+      properties:
+        code:
+          type: integer
+          default: 403
+        description:
+          type: string
+          default: "Forbidden Access."
+
+    InternalError:
+      type: object
+      properties:
+        code:
+          type: integer
+          default: 500
+        description:
+          type: string
+          default: "Internal Error"

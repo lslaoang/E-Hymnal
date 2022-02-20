@@ -1,6 +1,6 @@
-package com.lao.ehymnal.repository;
+package com.ehymnal.repository;
 
-import com.lao.ehymnal.model.Hymn;
+import com.ehymnal.model.Hymn;
 import org.springframework.stereotype.Repository;
 
 @Repository
