@@ -2,12 +2,15 @@ package com.lao.ehymnal.service.prepare;
 
 import com.lao.ehymnal.model.Hymn;
 import com.lao.ehymnal.repository.HymnRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PdfPrepareServiceImpl implements PdfPrepareService {
 
     private final HymnRepository hymnRepository;
+    private static Logger LOGGER = LoggerFactory.getLogger(PdfPrepareServiceImpl.class);
 
     public PdfPrepareServiceImpl(HymnRepository hymnRepository) {
         this.hymnRepository = hymnRepository;
@@ -23,10 +26,6 @@ public class PdfPrepareServiceImpl implements PdfPrepareService {
 
     }
 
-    @Override
-    public void collatePdfFiles() {
-
-    }
 
     @Override
     public void updatePdfFile(String id) {
@@ -38,6 +37,14 @@ public class PdfPrepareServiceImpl implements PdfPrepareService {
 
     @Override
     public void addPdfFile(Hymn hymn) {
-        hymnRepository.save(hymn);
+        String hymnId = hymn.getId();
+
+        if(hymnRepository.findById(hymnId) == null){
+            hymnRepository.save(hymn);
+            LOGGER.info("Hymn with {} successfully added in the repository", hymnId);
+        } else {
+            LOGGER.warn("Hymn with {} already in the repository", hymnId);
+        }
+
     }
 }

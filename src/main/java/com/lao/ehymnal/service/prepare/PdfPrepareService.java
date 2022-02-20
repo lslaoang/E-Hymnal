@@ -8,8 +8,6 @@ public interface PdfPrepareService {
 
     void splitPdfFileIndividually(String pdfFileAsString);
 
-    void collatePdfFiles();
-
     void updatePdfFile(String id);
 
     void addPdfFile(Hymn hymn);
