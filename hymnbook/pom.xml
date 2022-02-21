@@ -77,4 +77,12 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>E-Hymnal</name>
+            <url>https://maven.pkg.github.com/lslaoang/E-hymnal</url>
+        </repository>
+    </distributionManagement>
+
 </project>

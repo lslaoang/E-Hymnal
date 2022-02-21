@@ -26,6 +26,13 @@ public class HymnBookServiceImpl implements HymnBookService {
                 .title("test")
                 .build());
 
+        hymnBookRepository.save(HymnBook.builder()
+                .id("2")
+                .language(Language.EN)
+                .printDate("2022-10-11")
+                .title("test1")
+                .build());
+
         return (List<HymnBook>) hymnBookRepository.findAll();
     }
 }
