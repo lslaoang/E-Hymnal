@@ -18,7 +18,7 @@ public class HymnBookController {
         this.hymnBookService = hymnBookService;
     }
 
-    @GetMapping("/hymnBooks")
+    @GetMapping("/hymnbooks")
     public List<HymnBook> getAllBooks() {
 
 
