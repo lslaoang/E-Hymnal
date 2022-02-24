@@ -20,8 +20,22 @@ public class HymnBookController {
 
     @GetMapping("/hymnbooks")
     public List<HymnBook> getAllBooks() {
-
-
         return hymnBookService.displayAllHymns();
     }
+
+    @GetMapping("/hymnbooks-id")
+    public List<HymnBook> getAllBooksSortedById() {
+        return hymnBookService.sortById();
+    }
+
+    @GetMapping("/hymnbooks-title")
+    public List<HymnBook> getAllBooksSortedByTitle() {
+        return hymnBookService.sortByTitle();
+    }
+
+    @GetMapping("/hymnbooks-date")
+    public List<HymnBook> getAllBooksSortedByDate() {
+        return hymnBookService.sortByPrintDate();
+    }
+
 }
