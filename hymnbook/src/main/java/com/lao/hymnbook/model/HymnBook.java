@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,6 +20,6 @@ public class HymnBook {
     private String title;
     private Language language;
     @DateTimeFormat
-    private String printDate; 
+    private Date printDate;
 
 }
