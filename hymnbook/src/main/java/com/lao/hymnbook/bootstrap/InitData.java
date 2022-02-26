@@ -19,7 +19,7 @@ public class InitData implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         HymnBook hb1 = HymnBook.builder()
                 .id("1")

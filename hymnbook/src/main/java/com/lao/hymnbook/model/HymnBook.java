@@ -1,7 +1,6 @@
 package com.lao.hymnbook.model;
 
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,6 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 @Builder
 @Entity
 public class HymnBook {
@@ -19,7 +19,6 @@ public class HymnBook {
     private String id;
     private String title;
     private Language language;
-    @DateTimeFormat
     private Date printDate;
 
 }
