@@ -20,5 +20,6 @@ public class HymnBook {
     private String title;
     private Language language;
     private Date printDate;
+    private String file;
 
 }
