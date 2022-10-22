@@ -2,19 +2,17 @@ package com.lao.hymnbook.service;
 
 import com.lao.hymnbook.model.HymnBook;
 import com.lao.hymnbook.repository.HymnBookRepository;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
 
 @Service
+@Data
 public class HymnBookServiceImpl implements HymnBookService {
 
     private final HymnBookRepository hymnBookRepository;
-
-    public HymnBookServiceImpl(HymnBookRepository hymnBookRepository) {
-        this.hymnBookRepository = hymnBookRepository;
-    }
 
     @Override
     public List<HymnBook> displayAllHymns() {

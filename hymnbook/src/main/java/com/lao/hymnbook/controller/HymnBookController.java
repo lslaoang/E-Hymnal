@@ -2,6 +2,7 @@ package com.lao.hymnbook.controller;
 
 import com.lao.hymnbook.model.HymnBook;
 import com.lao.hymnbook.service.HymnBookService;
+import lombok.Data;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,13 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
+@Data
 public class HymnBookController {
 
     private final HymnBookService hymnBookService;
-
-    public HymnBookController(final HymnBookService hymnBookService) {
-        this.hymnBookService = hymnBookService;
-    }
 
     @GetMapping("/hymnbooks")
     public List<HymnBook> getAllBooks() {

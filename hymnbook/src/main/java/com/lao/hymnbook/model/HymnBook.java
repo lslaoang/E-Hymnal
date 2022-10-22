@@ -6,11 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
-@ToString
+@AllArgsConstructor
 @Builder
 @Entity
 public class HymnBook {
@@ -21,5 +19,4 @@ public class HymnBook {
     private Language language;
     private Date printDate;
     private String file;
-
 }

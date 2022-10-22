@@ -3,6 +3,7 @@ package com.lao.hymnbook.bootstrap;
 import com.lao.hymnbook.model.HymnBook;
 import com.lao.hymnbook.model.Language;
 import com.lao.hymnbook.repository.HymnBookRepository;
+import lombok.Data;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -10,13 +11,10 @@ import java.util.Arrays;
 import java.util.Date;
 
 @Component
+@Data
 public class InitData implements CommandLineRunner {
 
     private final HymnBookRepository hymnBookRepository;
-
-    public InitData(HymnBookRepository hymnBookRepository) {
-        this.hymnBookRepository = hymnBookRepository;
-    }
 
     @Override
     public void run(String... args) {
