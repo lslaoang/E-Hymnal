@@ -1,0 +1,4 @@
+#H2 database configuration
+spring:
+  profiles:
+    active: dev
