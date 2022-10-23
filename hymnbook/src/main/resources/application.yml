@@ -2,3 +2,7 @@
 spring:
   profiles:
     active: dev
+
+#Google App Engine Config
+runtime: java11
+instance_class: F1
