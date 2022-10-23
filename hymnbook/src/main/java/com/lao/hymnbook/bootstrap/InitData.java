@@ -63,6 +63,6 @@ public class InitData implements CommandLineRunner {
 
         hymnBookRepository.saveAll(Arrays.asList(hb1, hb2, hb3, hb4, hb5));
 
-        driveQuickStart.initGoogleAPI();
+//        driveQuickStart.initGoogleAPI();
     }
 }

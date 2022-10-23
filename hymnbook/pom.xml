@@ -14,14 +14,11 @@
     <name>e-hymnal</name>
     <description>hymnbook</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <project.id>e-hymnal</project.id>
+        <jackson.version>2.11.3</jackson.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -60,7 +57,7 @@
             <scope>test</scope>
         </dependency>
 
-<!--        Google API dependencies-->
+        <!--        Google API dependencies-->
         <dependency>
             <groupId>com.google.api-client</groupId>
             <artifactId>google-api-client</artifactId>
@@ -77,6 +74,13 @@
             <groupId>com.google.oauth-client</groupId>
             <artifactId>google-oauth-client-jetty</artifactId>
             <version>1.34.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>2.7.5</version>
         </dependency>
 
     </dependencies>
@@ -96,7 +100,7 @@
                 </configuration>
             </plugin>
 
-<!--            Google App Engine Plugin-->
+            <!--            Google App Engine Plugin-->
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
@@ -107,17 +111,11 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>com.google.cloud.tools</groupId>-->
-<!--                <artifactId>appengine-maven-plugin</artifactId>-->
-<!--                <version>2.4.4</version>-->
-<!--            </plugin>-->
-
-                <plugin>
-                    <groupId>com.google.appengine</groupId>
-                    <artifactId>appengine-maven-plugin</artifactId>
-                    <version>1.9.9</version>
-                </plugin>
+            <plugin>
+                <groupId>com.google.appengine</groupId>
+                <artifactId>appengine-maven-plugin</artifactId>
+                <version>1.9.9</version>
+            </plugin>
 
 
         </plugins>
