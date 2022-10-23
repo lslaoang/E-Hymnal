@@ -9,12 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lao</groupId>
-    <artifactId>hymnbook</artifactId>
+    <artifactId>e-hymnal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hymnbook</name>
+    <name>e-hymnal</name>
     <description>hymnbook</description>
     <properties>
         <java.version>1.8</java.version>
+        <project.id>e-hymnal</project.id>
     </properties>
     <dependencies>
         <dependency>
@@ -102,9 +103,22 @@
                 <version>2.2.0</version>
                 <configuration>
                     <version>1</version>
-                    <projectId>GCLOUD_CONFIG</projectId>
+                    <projectId>e-hymnal</projectId>
                 </configuration>
             </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>com.google.cloud.tools</groupId>-->
+<!--                <artifactId>appengine-maven-plugin</artifactId>-->
+<!--                <version>2.4.4</version>-->
+<!--            </plugin>-->
+
+                <plugin>
+                    <groupId>com.google.appengine</groupId>
+                    <artifactId>appengine-maven-plugin</artifactId>
+                    <version>1.9.9</version>
+                </plugin>
+
 
         </plugins>
     </build>
