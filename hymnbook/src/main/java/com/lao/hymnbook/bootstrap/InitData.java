@@ -1,11 +1,14 @@
 package com.lao.hymnbook.bootstrap;
 
+import com.lao.hymnbook.config.DriveQuickStart;
 import com.lao.hymnbook.model.HymnBook;
 import com.lao.hymnbook.model.Language;
 import com.lao.hymnbook.repository.HymnBookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -13,13 +16,15 @@ import java.util.Date;
 public class InitData implements CommandLineRunner {
 
     private final HymnBookRepository hymnBookRepository;
+    private final DriveQuickStart driveQuickStart;
 
-    public InitData(HymnBookRepository hymnBookRepository) {
+    public InitData(HymnBookRepository hymnBookRepository, DriveQuickStart driveQuickStart) {
         this.hymnBookRepository = hymnBookRepository;
+        this.driveQuickStart = driveQuickStart;
     }
 
     @Override
-    public void run(String... args) {
+    public void run(String... args) throws GeneralSecurityException, IOException {
 
         HymnBook hb1 = HymnBook.builder()
                 .id("1")
@@ -58,5 +63,6 @@ public class InitData implements CommandLineRunner {
 
         hymnBookRepository.saveAll(Arrays.asList(hb1, hb2, hb3, hb4, hb5));
 
+        driveQuickStart.initGoogleAPI();
     }
 }
