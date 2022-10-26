@@ -58,6 +58,7 @@ public class DriveQuickStart {
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
         // Load client secrets.
+        //TODO: Transfer client secrets to vault
         InputStream in = DriveQuickStart.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
         if (in == null) {
             throw new FileNotFoundException("Resource not found: " + CREDENTIALS_FILE_PATH);
