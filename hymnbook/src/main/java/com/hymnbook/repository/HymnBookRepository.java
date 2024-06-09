@@ -1,6 +1,6 @@
-package com.lao.hymnbook.repository;
+package com.hymnbook.repository;
 
-import com.lao.hymnbook.model.HymnBook;
+import com.hymnbook.model.HymnBook;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

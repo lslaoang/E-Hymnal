@@ -1,6 +1,6 @@
-package com.lao.hymnbook.service;
+package com.hymnbook.service;
 
-import com.lao.hymnbook.model.HymnBook;
+import com.hymnbook.model.HymnBook;
 
 import java.util.List;
 

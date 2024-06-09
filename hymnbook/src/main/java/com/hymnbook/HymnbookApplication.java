@@ -1,4 +1,4 @@
-package com.lao.hymnbook;
+package com.hymnbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

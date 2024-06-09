@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.3</version>
+        <version>3.2.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lao</groupId>
@@ -14,7 +14,7 @@
     <name>e-hymnal</name>
     <description>hymnbook</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <project.id>e-hymnal</project.id>
         <jackson.version>2.11.3</jackson.version>
     </properties>

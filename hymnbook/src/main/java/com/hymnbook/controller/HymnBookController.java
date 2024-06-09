@@ -1,7 +1,7 @@
-package com.lao.hymnbook.controller;
+package com.hymnbook.controller;
 
-import com.lao.hymnbook.model.HymnBook;
-import com.lao.hymnbook.service.HymnBookService;
+import com.hymnbook.model.HymnBook;
+import com.hymnbook.service.HymnBookService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

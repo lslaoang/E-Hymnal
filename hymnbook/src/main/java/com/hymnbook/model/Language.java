@@ -1,4 +1,4 @@
-package com.lao.hymnbook.model;
+package com.hymnbook.model;
 
 public enum Language {
     EN,

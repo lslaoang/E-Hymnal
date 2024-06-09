@@ -1,7 +1,7 @@
-package com.lao.hymnbook.service;
+package com.hymnbook.service;
 
-import com.lao.hymnbook.model.HymnBook;
-import com.lao.hymnbook.repository.HymnBookRepository;
+import com.hymnbook.model.HymnBook;
+import com.hymnbook.repository.HymnBookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;

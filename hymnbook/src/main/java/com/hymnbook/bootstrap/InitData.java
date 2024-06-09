@@ -1,9 +1,9 @@
-package com.lao.hymnbook.bootstrap;
+package com.hymnbook.bootstrap;
 
-import com.lao.hymnbook.config.DriveQuickStart;
-import com.lao.hymnbook.model.HymnBook;
-import com.lao.hymnbook.model.Language;
-import com.lao.hymnbook.repository.HymnBookRepository;
+import com.hymnbook.config.DriveQuickStart;
+import com.hymnbook.model.HymnBook;
+import com.hymnbook.model.Language;
+import com.hymnbook.repository.HymnBookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
