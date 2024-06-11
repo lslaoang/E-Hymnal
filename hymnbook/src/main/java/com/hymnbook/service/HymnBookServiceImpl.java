@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HymnBookServiceImpl implements HymnBookService {
@@ -40,5 +41,10 @@ public class HymnBookServiceImpl implements HymnBookService {
         List<HymnBook> sortedByDateList =(List<HymnBook>) hymnBookRepository.findAll();
         sortedByDateList.sort(Comparator.comparing(HymnBook::getPrintDate));
         return sortedByDateList;
+    }
+
+    @Override
+    public Optional<HymnBook> getHymnBookById(String id) {
+        return hymnBookRepository.findById(id);
     }
 }

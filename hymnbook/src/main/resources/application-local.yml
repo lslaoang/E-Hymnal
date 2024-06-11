@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://root-user:5QZOIZqyPrhK6mOA@hymnbook.tdmsvlp.mongodb.net/?retryWrites=true&w=majority&appName=hymnBook
