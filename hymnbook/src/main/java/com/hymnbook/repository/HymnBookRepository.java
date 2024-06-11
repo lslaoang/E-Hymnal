@@ -1,10 +1,8 @@
 package com.hymnbook.repository;
 
 import com.hymnbook.model.HymnBook;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-@Repository
-public interface HymnBookRepository extends CrudRepository<HymnBook, String> {
+public interface HymnBookRepository extends MongoRepository<HymnBook, String> {
 
 }

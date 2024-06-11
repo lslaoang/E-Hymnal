@@ -1,6 +1,5 @@
 package com.hymnbook.bootstrap;
 
-import com.hymnbook.config.DriveQuickStart;
 import com.hymnbook.model.HymnBook;
 import com.hymnbook.model.Language;
 import com.hymnbook.repository.HymnBookRepository;
@@ -16,11 +15,9 @@ import java.util.Date;
 public class InitData implements CommandLineRunner {
 
     private final HymnBookRepository hymnBookRepository;
-    private final DriveQuickStart driveQuickStart;
 
-    public InitData(HymnBookRepository hymnBookRepository, DriveQuickStart driveQuickStart) {
+    public InitData(HymnBookRepository hymnBookRepository) {
         this.hymnBookRepository = hymnBookRepository;
-        this.driveQuickStart = driveQuickStart;
     }
 
     @Override
@@ -62,7 +59,5 @@ public class InitData implements CommandLineRunner {
                 .build();
 
         hymnBookRepository.saveAll(Arrays.asList(hb1, hb2, hb3, hb4, hb5));
-
-//        driveQuickStart.initGoogleAPI();
     }
 }

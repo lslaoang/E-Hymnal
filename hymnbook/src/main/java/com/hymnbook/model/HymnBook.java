@@ -1,8 +1,7 @@
 package com.hymnbook.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 
@@ -12,7 +11,6 @@ import java.util.Date;
 @Setter
 @ToString
 @Builder
-@Entity
 public class HymnBook {
 
     @Id
